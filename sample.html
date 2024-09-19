@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calories Calculate</title>
+    <link rel="stylesheet" href="./sample.css">
+    <style>
+        input[type="text"], input[list] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        datalist option {
+            background-color: white;
+            color: black;
+            padding: 10px;
+            width: 100%;
+        }
+
+        input::-webkit-calendar-picker-indicator {
+            display: none;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Calories Calculate</h1>
+        <nav>
+            <ul>
+                <li><a href="./dashboard.html">Home</a></li>
+                <li><a href="./profile.html">Profile</a></li>
+                <li><a href="./browse_food.html">Meals</a></li>
+                <li><a href="./customer_service.html">Service</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="meal-plan">
+        <h2>Create Your Meal Plan</h2>
+        <form id="meal-plan-form">
+            <label for="day">Day:</label>
+            <select id="day" name="day">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
+            <br>
+
+            <label for="breakfast">Breakfast:</label>
+            <input list="breakfast-options" id="breakfast" name="breakfast" placeholder="Enter food items or select from the list">
+            <datalist id="breakfast-options">
+                <option value="Easy Hard-Boiled Eggs">
+                <option value="Chicken Caesar Salad">
+                <option value="Fresh Tomato Pasta">
+                <option value="Fluffy Pancakes">
+                <option value="Vegetable Omelette">
+                <option value="Berry Smoothie">
+                <option value="Avocado Toast">
+                <option value="Yogurt Parfait">
+                <option value="Egg Benedict">
+                <option value="Smoothie Bowl">
+                <option value="Chia Pudding">
+                <option value="Whole Grain Cereal">
+                <option value="Breakfast Burrito">
+                <option value="Fruit Salad">
+                <option value="Toast with Toppings">
+            </datalist>
+            <br>
+
+            <label for="lunch">Lunch:</label>
+            <input list="lunch-options" id="lunch" name="lunch" placeholder="Enter food items or select from the list">
+            <datalist id="lunch-options">
+                <option value="Paneer Butter Masala">
+                <option value="Chole Bhature">
+                <option value="Masala Dosa">
+                <option value="Chicken Tikka Masala">
+                <option value="Biryani">
+                <option value="Butter Chicken">
+                <option value="Dal Makhani">
+                <option value="Pulao">
+                <option value="Aloo Paratha">
+                <option value="Samosa">
+                <option value="Rajma Chawal">
+                <option value="Pani Puri">
+                <option value="Gulab Jamun">
+                <option value="Pav Bhaji">
+                <option value="Vada Pav">
+            </datalist>
+            <br>
+
+            <label for="dinner">Dinner:</label>
+            <input list="dinner-options" id="dinner" name="dinner" placeholder="Enter food items or select from the list">
+            <datalist id="dinner-options">
+                <option value="Kadai Paneer">
+                <option value="Tandoori Chicken">
+                <option value="Aloo Gobi">
+                <option value="Palak Paneer">
+                <option value="Malai Kofta">
+                <option value="Paneer Butter Masala">
+                <option value="Chole Bhature">
+                <option value="Masala Dosa">
+                <option value="Chicken Tikka Masala">
+                <option value="Biryani">
+            </datalist>
+            <br>
+
+            <button type="button" id="save-button" class="btn btn-primary">Save Plan</button>
+            <button type="button" id="delete-button" class="btn btn-danger">Delete Plan</button>
+        </form>
+    </section>
+
+    <section class="calorie-tracker">
+        <h2>Calorie and Protein Tracker</h2>
+        <p>Total Calories: <span id="total-calories">0</span> Calories</p>
+        <p>Total Protein: <span id="total-protein">0</span> g</p>
+        <button class="btn btn-success" id="calculate-button">Calculate Nutrients</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Diet Planner. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./sample.js"></script>
+</body>
+</html>
